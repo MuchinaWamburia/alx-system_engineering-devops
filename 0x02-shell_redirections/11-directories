@@ -1,0 +1,11 @@
+#!/bin/bash
+# Initialize the count variable
+count=0
+# Iterate through each entry in the current directory
+for entry in $(ls -d */ 2>/dev/null); do
+  # Increment the count variable
+  ((count++))
+done
+# Print the count
+echo $count
+
