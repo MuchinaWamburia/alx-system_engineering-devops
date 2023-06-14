@@ -5,4 +5,4 @@ water_decimal=$(echo "$water" | tr 'water' '01234')
 stir_decimal=$(echo "$stir" | tr 'stir' '01234')
 result_decimal=$((water_decimal + stir_decimal))
 result_bestchol=$(echo "$result_decimal" | tr '0123456789' 'bestchol')
-echo "$result_bestchol"
+printf "%s\n" "$result_bestchol"
