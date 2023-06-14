@@ -3,6 +3,6 @@ water="$WATER"
 stir="$STIR"
 water_decimal=$(echo "$water" | tr 'water' '01234')
 stir_decimal=$(echo "$stir" | tr 'stir' '01234')
-result_decimal=$((water_decimal + stir_decimal))
-result_bestchol=$(echo "$result_decimal" | tr '0123456789' 'bestchol')
+result_base10=$(echo "$water_base10 + $stir_base10" | bc)
+result_bestchol=$(echo "obase=5; $result_base10" | bc | tr '01234' 'bestchol')
 printf "%s\n" "$result_bestchol"
