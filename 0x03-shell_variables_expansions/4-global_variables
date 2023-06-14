@@ -1,8 +1,2 @@
 #!/bin/bash
-
-# Iterate over the environment variables
-for var in $(printenv)
-do
-    echo "$var"
-done
-
+printenv
