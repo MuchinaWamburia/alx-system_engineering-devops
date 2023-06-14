@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Split the PATH string using ":" delimiter
+IFS=':' read -ra DIRS <<< "$PATH"
+
+# Count the number of directories
+DIR_COUNT=${#DIRS[@]}
+
+echo $DIR_COUNT
+
